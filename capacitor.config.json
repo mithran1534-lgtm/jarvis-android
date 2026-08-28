@@ -1,0 +1,9 @@
+{
+  "appId": "com.jarvis.mobile",
+  "appName": "J.A.R.V.I.S.",
+  "webDir": "www",
+  "backgroundColor": "#060a0f",
+  "android": {
+    "allowMixedContent": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "jarvis-mobile-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "J.A.R.V.I.S. Mobile native Android shell with always-on wake word.",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  }
+}
