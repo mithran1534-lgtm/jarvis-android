@@ -92,6 +92,10 @@ public class WakeWordPlugin extends Plugin {
         call.resolve(ret);
     }
 
+    void emitEvent(String event, JSObject data) {
+        notifyListeners(event, data);
+    }
+
     private boolean hasAudioPermission() {
         return getPermissionState("recordAudio") == PermissionState.GRANTED;
     }
