@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -366,41 +366,41 @@ body.no-effects *{animation:none!important;transition:none!important;}
           <div class="quick-grid">
             <button class="quick" type="button" data-action="lights">
               <i class="ic" data-icon="lightbulb"></i>
-              <span class="quick-label">Lights</span>
+              <span class="quick-label">灯光</span>
               <span class="quick-state" id="qs-lights">Active</span>
             </button>
             <button class="quick" type="button" data-action="climate">
               <i class="ic" data-icon="thermometer"></i>
-              <span class="quick-label">Climate</span>
+              <span class="quick-label">气候</span>
               <span class="quick-state" id="qs-climate">22&deg;</span>
             </button>
             <button class="quick" type="button" data-action="music">
               <i class="ic" data-icon="music"></i>
-              <span class="quick-label">Music</span>
+              <span class="quick-label">音乐</span>
               <span class="quick-state" id="qs-music">Paused</span>
             </button>
             <button class="quick" type="button" data-action="security">
               <i class="ic" data-icon="shield"></i>
-              <span class="quick-label">Security</span>
-              <span class="quick-state" id="qs-security">Armed</span>
+              <span class="quick-label">安防</span>
+              <span class="quick-state" id="qs-security">已布防</span>
             </button>
           </div>
 
           <div class="home-stats">
             <div class="stat-card">
-              <label>Energy</label>
+              <label>能源</label>
               <div class="bars" id="energyBars"></div>
-              <em>68% of capacity</em>
+              <em>容量 68%</em>
             </div>
             <div class="stat-card">
-              <label>Next</label>
+              <label>下一个</label>
               <strong id="nextTime">21:30</strong>
-              <em id="nextTitle">Call with Pepper</em>
+              <em id="nextTitle">与佩珀通话</em>
             </div>
             <div class="stat-card">
-              <label>Focus</label>
+              <label>专注</label>
               <strong id="focusCount">3/5</strong>
-              <em>tasks complete</em>
+              <em>任务已完成</em>
             </div>
           </div>
         </div>
@@ -412,124 +412,124 @@ body.no-effects *{animation:none!important;transition:none!important;}
             <span class="ai-badge">J</span>
             <div class="chat-title">
               <strong>J.A.R.V.I.S.</strong>
-              <span class="online-tag"><i></i> online</span>
+              <span class="online-tag"><i></i> 在线</span>
             </div>
           </div>
-          <button class="icon-btn" id="chatClear" type="button" aria-label="Clear conversation"><i class="ic" data-icon="trash"></i></button>
+          <button class="icon-btn" id="chatClear" type="button" aria-label="清空对话"><i class="ic" data-icon="trash"></i></button>
         </div>
         <div class="chat-scroll" id="chatScroll" aria-live="polite"></div>
         <div class="composer">
           <div class="suggest-row" id="suggestRow">
-            <button class="chip" type="button" data-prompt="Status report">Status report</button>
-            <button class="chip" type="button" data-prompt="What is on my agenda?">What is on my agenda?</button>
-            <button class="chip" type="button" data-prompt="Dim the lights">Dim the lights</button>
-            <button class="chip" type="button" data-prompt="Tell me a joke">Tell me a joke</button>
+            <button class="chip" type="button" data-prompt="Status report">状态报告</button>
+            <button class="chip" type="button" data-prompt="What is on my agenda?">我今天有什么安排？</button>
+            <button class="chip" type="button" data-prompt="Dim the lights">把灯调暗</button>
+            <button class="chip" type="button" data-prompt="Tell me a joke">讲个笑话</button>
           </div>
           <div class="composer-row">
-            <textarea id="chatInput" rows="1" placeholder="Message Jarvis..."></textarea>
-            <button class="icon-btn" id="micBtn" type="button" aria-label="Voice input"><i class="ic" data-icon="mic"></i></button>
-            <button class="icon-btn" id="sendBtn" type="button" aria-label="Send"><i class="ic" data-icon="send"></i></button>
+            <textarea id="chatInput" rows="1" placeholder="给贾维斯发消息..."></textarea>
+            <button class="icon-btn" id="micBtn" type="button" aria-label="语音输入"><i class="ic" data-icon="mic"></i></button>
+            <button class="icon-btn" id="sendBtn" type="button" aria-label="发送"><i class="ic" data-icon="send"></i></button>
           </div>
         </div>
       </section>
 
       <section class="view" id="view-controls">
         <div class="view-head">
-          <p class="eyebrow">Tower command</p>
-          <h2>Controls</h2>
+          <p class="eyebrow">贾维斯指挥</p>
+          <h2>控制台</h2>
         </div>
 
-        <div class="section-title"><span>Environment</span><em id="envSummary">2 active</em></div>
+        <div class="section-title"><span>环境</span><em id="envSummary">2 active</em></div>
         <div class="device-row on" id="row-living">
           <span class="d-icon"><i class="ic" data-icon="lightbulb"></i></span>
-          <div class="d-info"><strong>Living Room</strong><span>Main lights</span></div>
+          <div class="d-info"><strong>客厅</strong><span>主灯</span></div>
           <label class="switch"><input type="checkbox" data-device="livingLights"><span class="track"></span><span class="thumb"></span></label>
         </div>
         <div class="device-row" id="row-bed">
           <span class="d-icon"><i class="ic" data-icon="bed"></i></span>
-          <div class="d-info"><strong>Bedroom</strong><span>Night lamps</span></div>
+          <div class="d-info"><strong>卧室</strong><span>夜灯</span></div>
           <label class="switch"><input type="checkbox" data-device="bedLights"><span class="track"></span><span class="thumb"></span></label>
         </div>
         <div class="device-row" id="row-studio">
           <span class="d-icon"><i class="ic" data-icon="monitor"></i></span>
-          <div class="d-info"><strong>Studio</strong><span>Workbench lights</span></div>
+          <div class="d-info"><strong>工作室</strong><span>工作台灯</span></div>
           <label class="switch"><input type="checkbox" data-device="studioLights"><span class="track"></span><span class="thumb"></span></label>
         </div>
         <div class="ctrl-card">
           <div class="card-top">
-            <div><label>Blinds</label><strong id="blindsValue">35%</strong></div>
-            <em>Living area</em>
+            <div><label>窗帘</label><strong id="blindsValue">35%</strong></div>
+            <em>客厅区域</em>
           </div>
           <div class="range-wrap">
-            <div class="range-top"><span>Closed</span><span>Open</span></div>
-            <input type="range" id="blindsSlider" min="0" max="100" value="35" data-device="blinds" aria-label="Blinds position">
+            <div class="range-top"><span>关闭</span><span>打开</span></div>
+            <input type="range" id="blindsSlider" min="0" max="100" value="35" data-device="blinds" aria-label="窗帘位置">
           </div>
         </div>
 
-        <div class="section-title"><span>Climate</span></div>
+        <div class="section-title"><span>气候</span></div>
         <div class="ctrl-card">
           <div class="card-top">
-            <div><label>Temperature</label><strong id="tempValue">22&deg;</strong></div>
-            <em id="climateModeLabel">Auto</em>
+            <div><label>温度</label><strong id="tempValue">22&deg;</strong></div>
+            <em id="climateModeLabel">自动</em>
           </div>
           <div class="range-wrap">
             <div class="range-top"><span>16&deg;</span><span>30&deg;</span></div>
-            <input type="range" id="tempSlider" min="16" max="30" value="22" data-device="climateTemp" aria-label="Temperature">
+            <input type="range" id="tempSlider" min="16" max="30" value="22" data-device="climateTemp" aria-label="温度">
           </div>
           <div class="mode-row">
-            <button class="mode-btn" type="button" data-mode="auto">Auto</button>
-            <button class="mode-btn" type="button" data-mode="cool">Cool</button>
-            <button class="mode-btn" type="button" data-mode="heat">Heat</button>
+            <button class="mode-btn" type="button" data-mode="auto">自动</button>
+            <button class="mode-btn" type="button" data-mode="cool">制冷</button>
+            <button class="mode-btn" type="button" data-mode="heat">制热</button>
           </div>
         </div>
 
-        <div class="section-title"><span>Security</span></div>
+        <div class="section-title"><span>安防</span></div>
         <div class="ctrl-card">
           <div class="card-top">
-            <div><label>Perimeter</label><strong id="secStatus">Armed</strong></div>
+            <div><label>周界</label><strong id="secStatus">已布防</strong></div>
             <em id="secZone">Zone 1-4</em>
           </div>
           <div class="security-line">
             <span class="d-icon"><i class="ic" data-icon="shield-check"></i></span>
             <div class="s-info">
-              <strong>Defense grid</strong>
-              <span id="secEvent">Last event: 14:02 &middot; Main gate</span>
+              <strong>防御系统</strong>
+              <span id="secEvent">最近事件：14:02 · 正门</span>
             </div>
             <label class="switch"><input type="checkbox" data-device="security"><span class="track"></span><span class="thumb"></span></label>
           </div>
         </div>
 
-        <div class="section-title"><span>Media</span></div>
+        <div class="section-title"><span>媒体</span></div>
         <div class="ctrl-card">
           <div class="now-playing">
             <span class="np-art"><i class="ic" data-icon="music"></i></span>
             <div class="np-info">
-              <strong id="trackName">Arc Reactor Suite</strong>
-              <span id="trackMeta">Ambient Lab &middot; 04:12</span>
+              <strong id="trackName">方舟反应堆组曲</strong>
+              <span id="trackMeta">环境实验室 · 04:12</span>
             </div>
-            <button class="np-play" id="playBtn" type="button" aria-label="Play or pause"><i class="ic" data-icon="play"></i></button>
+            <button class="np-play" id="playBtn" type="button" aria-label="播放或暂停"><i class="ic" data-icon="play"></i></button>
           </div>
           <div class="range-wrap">
-            <div class="range-top"><span id="volLabel">Volume 42%</span><span>Studio</span></div>
+            <div class="range-top"><span id="volLabel">Volume 42%</span><span>工作室</span></div>
             <input type="range" id="volSlider" min="0" max="100" value="42" data-device="volume" aria-label="Volume">
           </div>
         </div>
 
-        <div class="section-title"><span>Energy</span></div>
+        <div class="section-title"><span>能源</span></div>
         <div class="ctrl-card">
           <div class="card-top">
-            <div><label>Consumption</label><strong>1.84 kW</strong></div>
-            <em>Today</em>
+            <div><label>消耗</label><strong>1.84 kW</strong></div>
+            <em>今天</em>
           </div>
           <div class="energy-bars" id="energyBarsBig"></div>
-          <div class="energy-legend"><span>00:00</span><span>12:00</span><span>Now</span></div>
+          <div class="energy-legend"><span>00:00</span><span>12:00</span><span>现在</span></div>
         </div>
       </section>
 
       <section class="view" id="view-agenda">
         <div class="view-head">
-          <p class="eyebrow">Priority matrix</p>
-          <h2>Agenda</h2>
+          <p class="eyebrow">优先级矩阵</p>
+          <h2>日程</h2>
         </div>
         <div class="progress-card">
           <div class="ring-wrap">
@@ -540,122 +540,122 @@ body.no-effects *{animation:none!important;transition:none!important;}
             <span class="ring-num" id="ringNum">3/5</span>
           </div>
           <div class="p-info">
-            <strong>Good progress, sir.</strong>
-            <span id="taskHint">3 of 5 tasks complete today</span>
+            <strong>进展不错，先生。</strong>
+            <span id="taskHint">今天已完成 3/5 个任务</span>
           </div>
         </div>
-        <div class="section-title"><span>Tasks</span><em id="taskCount">3 / 5</em></div>
+        <div class="section-title"><span>任务</span><em id="taskCount">3 / 5</em></div>
         <div class="task-list" id="taskList"></div>
-        <div class="section-title"><span>Schedule</span></div>
+        <div class="section-title"><span>日程</span></div>
         <div class="schedule-list" id="scheduleList"></div>
       </section>
 
       <section class="view" id="view-settings">
         <div class="view-head">
-          <p class="eyebrow">Configuration</p>
-          <h2>Settings</h2>
+          <p class="eyebrow">配置</p>
+          <h2>设置</h2>
         </div>
-        <div class="section-title"><span>Voice interface</span></div>
+        <div class="section-title"><span>语音接口</span></div>
         <div class="set-card">
           <div class="set-row">
-            <div class="s-label"><strong>Voice replies</strong><span>Jarvis reads responses aloud</span></div>
+            <div class="s-label"><strong>语音回复</strong><span>贾维斯朗读回复</span></div>
             <label class="switch"><input type="checkbox" data-setting="voiceReplies"><span class="track"></span><span class="thumb"></span></label>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Voice profile</strong><span>Preferred speech model</span></div>
+            <div class="s-label"><strong>语音音色</strong><span>选择语音模型</span></div>
             <select id="voiceProfile">
-              <option value="mark2">Mark II</option>
-              <option value="mark3">Mark III</option>
-              <option value="classic">Classic</option>
+              <option value="mark2">二代</option>
+              <option value="mark3">三代</option>
+              <option value="classic">经典</option>
             </select>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Hey Jarvis wake</strong><span>Android always-on listening</span></div>
+            <div class="s-label"><strong>Hey Jarvis 唤醒</strong><span>安卓常驻语音监听</span></div>
             <label class="switch"><input type="checkbox" data-setting="wakeWord"><span class="track"></span><span class="thumb"></span></label>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Wake mode</strong><span>Offline Porcupine or system speech</span></div>
+            <div class="s-label"><strong>唤醒模式</strong><span>离线 Porcupine 或系统语音</span></div>
             <select id="wakeMode" data-setting="wakeMode">
-              <option value="speech">System speech</option>
-              <option value="porcupine">Porcupine offline</option>
+              <option value="speech">系统语音</option>
+              <option value="porcupine">Porcupine 离线</option>
             </select>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Porcupine key</strong><span>Access key from Picovoice console</span></div>
+            <div class="s-label"><strong>Porcupine 密钥</strong><span>来自 Picovoice 控制台的密钥</span></div>
             <input class="text-input" type="password" data-setting="porcupineKey" placeholder="AccessKey..." autocomplete="off">
           </div>
         </div>
-        <div class="section-title"><span>Interface</span></div>
+        <div class="section-title"><span>界面</span></div>
         <div class="set-card">
           <div class="set-row">
-            <div class="s-label"><strong>Accent color</strong><span>HUD display theme</span></div>
+            <div class="s-label"><strong>主题色</strong><span>HUD 显示主题</span></div>
             <div class="accent-row" id="accentRow">
-              <button class="accent-swatch active" type="button" data-accent="cyan"><i style="--sw:#37e6da"></i>Cyan</button>
-              <button class="accent-swatch" type="button" data-accent="amber"><i style="--sw:#ffb454"></i>Amber</button>
-              <button class="accent-swatch" type="button" data-accent="magenta"><i style="--sw:#ff5f8f"></i>Rose</button>
-              <button class="accent-swatch" type="button" data-accent="green"><i style="--sw:#4ade80"></i>Green</button>
+              <button class="accent-swatch active" type="button" data-accent="cyan"><i style="--sw:#37e6da"></i>青色</button>
+              <button class="accent-swatch" type="button" data-accent="amber"><i style="--sw:#ffb454"></i>琥珀</button>
+              <button class="accent-swatch" type="button" data-accent="magenta"><i style="--sw:#ff5f8f"></i>玫红</button>
+              <button class="accent-swatch" type="button" data-accent="green"><i style="--sw:#4ade80"></i>绿色</button>
             </div>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Notifications</strong><span>Event and status alerts</span></div>
+            <div class="s-label"><strong>通知</strong><span>事件与状态提醒</span></div>
             <label class="switch"><input type="checkbox" data-setting="notifications"><span class="track"></span><span class="thumb"></span></label>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>HUD effects</strong><span>Core scan and motion</span></div>
+            <div class="s-label"><strong>HUD 特效</strong><span>核心扫描与动效</span></div>
             <label class="switch"><input type="checkbox" data-setting="hudEffects"><span class="track"></span><span class="thumb"></span></label>
           </div>
         </div>
-        <div class="section-title"><span>AI engine</span></div>
+        <div class="section-title"><span>AI 引擎</span></div>
         <div class="set-card">
           <div class="set-row">
-            <div class="s-label"><strong>Use AI engine</strong><span>Real model replies on this phone</span></div>
+            <div class="s-label"><strong>启用 AI 引擎</strong><span>在手机上使用真实模型回复</span></div>
             <label class="switch"><input type="checkbox" data-setting="aiEnabled"><span class="track"></span><span class="thumb"></span></label>
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>API base</strong><span>OpenAI-compatible endpoint</span></div>
+            <div class="s-label"><strong>API 地址</strong><span>OpenAI 兼容接口</span></div>
             <input class="text-input" type="text" data-setting="aiBaseUrl" value="https://api.openai.com/v1" spellcheck="false">
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>Model</strong><span>Model name</span></div>
+            <div class="s-label"><strong>模型</strong><span>模型名称</span></div>
             <input class="text-input" type="text" data-setting="aiModel" value="gpt-4o-mini" spellcheck="false">
           </div>
           <div class="set-row">
-            <div class="s-label"><strong>API key</strong><span>Stored only on this device</span></div>
+            <div class="s-label"><strong>API 密钥</strong><span>仅保存在本机</span></div>
             <input class="text-input" type="password" data-setting="aiKey" placeholder="sk-..." autocomplete="off">
           </div>
         </div>
-        <div class="section-title"><span>System</span></div>
+        <div class="section-title"><span>系统</span></div>
         <div class="set-card">
           <div class="about-head">
             <span class="about-badge">J</span>
             <div><strong>J.A.R.V.I.S. Mobile</strong><span>Just A Rather Very Intelligent System</span></div>
           </div>
           <div class="about-meta">
-            <div><span>Version</span><strong>3.2.1</strong></div>
-            <div><span>Build</span><strong>20828</strong></div>
-            <div><span>Node</span><strong>Home Lab</strong></div>
+            <div><span>版本</span><strong>3.2.1</strong></div>
+            <div><span>构建</span><strong>20828</strong></div>
+            <div><span>节点</span><strong>家庭实验室</strong></div>
           </div>
-          <button class="reset-btn" id="resetBtn" type="button">Reset to factory defaults</button>
+          <button class="reset-btn" id="resetBtn" type="button">恢复出厂设置</button>
         </div>
       </section>
     </main>
 
     <nav class="tabbar" aria-label="Primary">
-      <button class="tab active" type="button" data-tab="home"><i class="ic" data-icon="home"></i><span>Home</span></button>
-      <button class="tab" type="button" data-tab="chat"><i class="ic" data-icon="message"></i><span>Companion</span></button>
-      <button class="tab" type="button" data-tab="controls"><i class="ic" data-icon="sliders"></i><span>Controls</span></button>
-      <button class="tab" type="button" data-tab="agenda"><i class="ic" data-icon="calendar"></i><span>Agenda</span></button>
-      <button class="tab" type="button" data-tab="settings"><i class="ic" data-icon="settings"></i><span>Settings</span></button>
+      <button class="tab active" type="button" data-tab="home"><i class="ic" data-icon="home"></i><span>首页</span></button>
+      <button class="tab" type="button" data-tab="chat"><i class="ic" data-icon="message"></i><span>对话</span></button>
+      <button class="tab" type="button" data-tab="controls"><i class="ic" data-icon="sliders"></i><span>控制台</span></button>
+      <button class="tab" type="button" data-tab="agenda"><i class="ic" data-icon="calendar"></i><span>日程</span></button>
+      <button class="tab" type="button" data-tab="settings"><i class="ic" data-icon="settings"></i><span>设置</span></button>
     </nav>
 
     <div class="toast" id="toast" role="status"></div>
 
     <div class="voice-overlay" id="voiceOverlay">
       <div class="voice-panel">
-        <div class="voice-head"><span class="voice-pulse"></span><strong id="voiceState">Listening</strong></div>
+        <div class="voice-head"><span class="voice-pulse"></span><strong id="voiceState">聆听中</strong></div>
         <div class="wave" id="voiceWave"></div>
-        <p class="voice-text" id="voiceText">Awaiting input</p>
-        <button class="voice-cancel" id="voiceCancel" type="button">Cancel</button>
+        <p class="voice-text" id="voiceText">等待指令</p>
+        <button class="voice-cancel" id="voiceCancel" type="button">取消</button>
       </div>
     </div>
   </div>
@@ -874,7 +874,7 @@ function addMessage(role,text,stream){
         const last=state.chats[state.chats.length-1];
         if(last)last.text=text;
         save();
-        if(state.voiceReplies&&'speechSynthesis' in window)speak(text);
+        if(state.voiceReplies)speak(text);
       }
     },26);
   }else{
@@ -942,7 +942,7 @@ const intents=[
   {re:/music|song|play(ing)?|sound|track/i,reply:(m)=>{
     const stop=/(stop|off|pause)/.test(m);
     state.devices.music=!stop;save();syncDevices();
-    return stop?'Music suspended, sir.':'Now playing Arc Reactor Suite through the studio speakers, sir.';
+    return stop?'Music suspended, sir.':'Now playing 方舟反应堆组曲 through the studio speakers, sir.';
   }},
   {re:/agenda|schedule|plan|next|calendar/i,reply:()=>{
     const nxt=schedule[0];
@@ -1019,7 +1019,7 @@ async function aiReply(){
     .map(m=>({role:m.role,content:m.text}));
   const res=await NativeBridge.chat(history);
   if(res&&res.ok&&res.content)return res.content;
-  if(res&&res.error)toast('AI request failed');
+  if(res&&res.error)toast('AI 请求失败');
   return null;
 }
 function submitChat(text){
@@ -1048,7 +1048,7 @@ $('#chatClear').addEventListener('click',()=>{
   state.suggested=true;
   save();renderChats();
   $('#suggestRow').style.display='flex';
-  toast('Conversation cleared');
+  toast('对话已清空');
 });
 
 function buildWave(){
@@ -1064,20 +1064,20 @@ let recognition=null,voiceCancelled=false;
 const voiceSamples=[
   'Dim the lights to forty percent.',
   'What is on my agenda for tomorrow?',
-  'Play the Arc Reactor Suite.',
+  'Play the 方舟反应堆组曲.',
   'Give me a status report.'
 ];
 function openVoice(){
   voiceCancelled=false;
   buildWave();
-  $('#voiceText').textContent='Awaiting input';
-  $('#voiceState').textContent='Listening';
+  $('#voiceText').textContent='等待指令';
+  $('#voiceState').textContent='聆听中';
   $('#voiceOverlay').classList.add('active');
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(SR){
     try{
       recognition=new SR();
-      recognition.lang='en-US';
+      recognition.lang='zh-CN';
       recognition.interimResults=true;
       recognition.continuous=false;
       recognition.onresult=e=>{
@@ -1089,12 +1089,12 @@ function openVoice(){
         recognition=null;
         $('#voiceOverlay').classList.remove('active');
         const t=$('#voiceText').textContent;
-        if(t&&t!=='Awaiting input')submitChat(t);
+        if(t&&t!=='等待指令')submitChat(t);
       };
       recognition.onerror=()=>{
         recognition=null;
         $('#voiceOverlay').classList.remove('active');
-        toast('Voice input unavailable');
+        toast('语音输入不可用');
       };
       recognition.start();
       return;
@@ -1126,24 +1126,24 @@ function syncDevices(){
     if(typeof val==='number'){input.value=val;setSliderFill(input);}
   });
   const on=lightsOn();
-  $('#qs-lights').textContent=on?'Active':'Off';
+  $('#qs-lights').textContent=on?'开启':'关闭';
   $('#qs-climate').textContent=state.devices.climateTemp+'\u00b0';
-  $('#qs-music').textContent=state.devices.music?'Playing':'Paused';
-  $('#qs-security').textContent=state.devices.security?'Armed':'Disarmed';
+  $('#qs-music').textContent=state.devices.music?'播放中':'已暂停';
+  $('#qs-security').textContent=state.devices.security?'已布防':'已撤防';
   $$('.quick[data-action]').forEach(b=>b.classList.toggle('on',actionState(b.dataset.action)));
   $('#row-living').classList.toggle('on',state.devices.livingLights);
   $('#row-bed').classList.toggle('on',state.devices.bedLights);
   $('#row-studio').classList.toggle('on',state.devices.studioLights);
   $('#tempValue').textContent=state.devices.climateTemp+'\u00b0';
   $('#blindsValue').textContent=state.devices.blinds+'%';
-  $('#secStatus').textContent=state.devices.security?'Armed':'Disarmed';
+  $('#secStatus').textContent=state.devices.security?'已布防':'已撤防';
   $('#secZone').textContent=state.devices.security?'Zone 1-4':'Zone 1-4';
   $$('.mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===state.devices.climateMode));
-  $('#climateModeLabel').textContent=state.devices.climateMode==='auto'?'Auto':state.devices.climateMode==='cool'?'Cool':'Heat';
-  $('#volLabel').textContent='Volume '+state.devices.volume+'%';
+  $('#climateModeLabel').textContent=state.devices.climateMode==='auto'?'自动':state.devices.climateMode==='cool'?'制冷':'制热';
+  $('#volLabel').textContent='音量 '+state.devices.volume+'%';
   $('#playBtn').innerHTML=icon(state.devices.music?'pause':'play');
   const active=[state.devices.livingLights,state.devices.bedLights,state.devices.studioLights].filter(Boolean).length;
-  $('#envSummary').textContent=active+' active';
+  $('#envSummary').textContent=active+' 个开启';
 }
 function actionState(name){
   if(name==='lights')return lightsOn();
@@ -1157,11 +1157,11 @@ $$('[data-device]').forEach(input=>{
     const key=input.dataset.device;
     state.devices[key]=input.type==='checkbox'?input.checked:Number(input.value);
     save();syncDevices();
-    if(key==='livingLights')toast(state.devices.livingLights?'Living room lights on':'Living room lights off');
-    if(key==='bedLights')toast(state.devices.bedLights?'Bedroom lamps on':'Bedroom lamps off');
-    if(key==='studioLights')toast(state.devices.studioLights?'Studio lights on':'Studio lights off');
-    if(key==='security')toast(state.devices.security?'Perimeter armed':'Perimeter disarmed');
-    if(key==='music')toast(state.devices.music?'Music playing':'Music paused');
+    if(key==='livingLights')toast(state.devices.livingLights?'客厅灯已开启':'客厅灯已关闭');
+    if(key==='bedLights')toast(state.devices.bedLights?'卧室灯已开启':'卧室灯已关闭');
+    if(key==='studioLights')toast(state.devices.studioLights?'工作室灯已开启':'工作室灯已关闭');
+    if(key==='security')toast(state.devices.security?'周界已布防':'周界已撤防');
+    if(key==='music')toast(state.devices.music?'音乐播放中':'音乐已暂停');
   });
   input.addEventListener('input',()=>{
     if(input.type==='range'){
@@ -1169,17 +1169,17 @@ $$('[data-device]').forEach(input=>{
       setSliderFill(input);
       if(input.id==='tempSlider')$('#tempValue').textContent=state.devices.climateTemp+'\u00b0';
       if(input.id==='blindsSlider')$('#blindsValue').textContent=state.devices.blinds+'%';
-      if(input.id==='volSlider')$('#volLabel').textContent='Volume '+state.devices.volume+'%';
+      if(input.id==='volSlider')$('#volLabel').textContent='音量 '+state.devices.volume+'%';
       save();
     }
   });
 });
 $$('.quick[data-action]').forEach(b=>b.addEventListener('click',()=>{
   const a=b.dataset.action;
-  if(a==='lights'){setAllLights(!lightsOn());toast(lightsOn()?'Tower lights on':'Tower lights off');}
+  if(a==='lights'){setAllLights(!lightsOn());toast(lightsOn()?'大厦灯光已开启':'大厦灯光已关闭');}
   if(a==='climate')setTab('controls');
-  if(a==='music'){state.devices.music=!state.devices.music;save();syncDevices();toast(state.devices.music?'Music playing':'Music paused');}
-  if(a==='security'){state.devices.security=!state.devices.security;save();syncDevices();toast(state.devices.security?'Perimeter armed':'Perimeter disarmed');}
+  if(a==='music'){state.devices.music=!state.devices.music;save();syncDevices();toast(state.devices.music?'音乐播放中':'音乐已暂停');}
+  if(a==='security'){state.devices.security=!state.devices.security;save();syncDevices();toast(state.devices.security?'周界已布防':'周界已撤防');}
 }));
 $$('.mode-btn').forEach(b=>b.addEventListener('click',()=>{state.devices.climateMode=b.dataset.mode;save();syncDevices();}));
 
@@ -1197,7 +1197,7 @@ function renderTasks(){
   state.tasks.forEach(t=>{
     const row=document.createElement('div');
     row.className='task-row'+(t.done?' done':'');
-    row.innerHTML=`<span class="check">${icon('check')}</span><strong>${t.text}</strong><span>${t.done?'done':'open'}</span>`;
+    row.innerHTML=`<span class="check">${icon('check')}</span><strong>${t.text}</strong><span>${t.done?'已完成':'未完成'}</span>`;
     row.addEventListener('click',()=>{t.done=!t.done;save();renderTasks();});
     list.appendChild(row);
   });
@@ -1207,7 +1207,7 @@ function renderTasks(){
   $('#ringNum').textContent=done+'/'+state.tasks.length;
   $('#taskCount').textContent=done+' / '+state.tasks.length;
   $('#focusCount').textContent=done+'/'+state.tasks.length;
-  $('#taskHint').textContent=`${done} of ${state.tasks.length} tasks complete today`;
+  $('#taskHint').textContent=`今天已完成 ${done}/${state.tasks.length} 个任务`;
 }
 function renderSchedule(){
   const list=$('#scheduleList');list.innerHTML='';
@@ -1260,7 +1260,7 @@ const NativeBridge={
   async start(quiet){
     if(!this.plugin)return false;
     try{await this.plugin.start();return true;}
-    catch(e){if(!quiet)toast('Microphone permission required');return false;}
+    catch(e){if(!quiet)toast('需要麦克风权限');return false;}
   },
   async stop(){
     if(!this.plugin)return;
@@ -1294,7 +1294,7 @@ function onWakeWord(){
   setTab('chat');
   buildWave();
   $('#voiceState').textContent='Hey Jarvis';
-  $('#voiceText').textContent='Command mode';
+  $('#voiceText').textContent='指令模式';
   $('#voiceOverlay').classList.add('active');
   toast('Hey Jarvis');
 }
@@ -1310,36 +1310,36 @@ $$('[data-setting]').forEach(input=>input.addEventListener('change',async()=>{
   if(key==='wakeWord'){
     if(!NativeBridge.available){
       input.checked=false;state.wakeWord=false;save();
-      toast('Wake word requires the Android app');
+      toast('唤醒词需要安卓 App');
       return;
     }
     if(input.checked){
       let ok=await NativeBridge.requestPermission();
       if(ok)ok=await NativeBridge.configureWake();
       if(ok)ok=await NativeBridge.start();
-      if(!ok){input.checked=false;state.wakeWord=false;save();toast('Wake word unavailable');return;}
+      if(!ok){input.checked=false;state.wakeWord=false;save();toast('唤醒词不可用');return;}
     }else{
       await NativeBridge.stop();
     }
     state.wakeWord=input.checked;save();
-    toast(input.checked?'Hey Jarvis enabled':'Hey Jarvis disabled');
+    toast(input.checked?'Hey Jarvis 已开启':'Hey Jarvis 已关闭');
     return;
   }
   state[key]=input.checked;
   if(key==='hudEffects')document.body.classList.toggle('no-effects',!state.hudEffects);
   save();
-  if(key==='notifications'&&state.notifications)toast('Notifications enabled');
+  if(key==='notifications'&&state.notifications)toast('通知已开启');
 }));
 $$('input[data-setting][type="text"],input[data-setting][type="password"]').forEach(input=>{
   input.addEventListener('input',()=>{state[input.dataset.setting]=input.value.trim();save();});
 });
-$('#voiceProfile').addEventListener('change',e=>{state.voiceProfile=e.target.value;save();toast('Voice profile updated');});
+$('#voiceProfile').addEventListener('change',e=>{state.voiceProfile=e.target.value;save();toast('语音音色已更新');});
 $('#wakeMode').addEventListener('change',e=>{state.wakeMode=e.target.value;save();});
 $$('.accent-swatch').forEach(s=>s.addEventListener('click',()=>{
   state.accent=s.dataset.accent;
   document.body.dataset.accent=state.accent;
   save();syncSettings();
-  toast('Accent updated');
+  toast('主题色已更新');
 }));
 $('#resetBtn').addEventListener('click',()=>{
   localStorage.removeItem(KEY);
