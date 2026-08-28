@@ -191,7 +191,7 @@ public class WakeWordService extends Service implements RecognitionListener {
             recognizer.setRecognitionListener(this);
             Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "zh-CN");
             intent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true);
             intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 3);
             intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1800L);
@@ -207,7 +207,7 @@ public class WakeWordService extends Service implements RecognitionListener {
     public void onResults(Bundle results) {
         String text = firstTranscript(results);
         if (wakeMode) {
-            if (text != null && text.toLowerCase(Locale.US).contains("jarvis")) {
+            if (text != null && isWakeWord(text)) {
                 onWakeWordDetected(text);
                 return;
             }
@@ -229,7 +229,7 @@ public class WakeWordService extends Service implements RecognitionListener {
             return;
         }
         String text = firstTranscript(partialResults);
-        if (text != null && text.toLowerCase(Locale.US).contains("jarvis")) {
+        if (text != null && isWakeWord(text)) {
             onWakeWordDetected(text);
         }
     }
@@ -265,16 +265,26 @@ public class WakeWordService extends Service implements RecognitionListener {
         }
     }
 
+    private boolean isWakeWord(String text) {
+        String lower = text.toLowerCase(Locale.US);
+        return lower.contains("jarvis") || lower.contains("贾维斯");
+    }
+
     private String stripWakePrefix(String text) {
         if (text == null) {
             return "";
         }
         String lower = text.toLowerCase(Locale.US);
         int idx = lower.indexOf("jarvis");
+        int skip = "jarvis".length();
+        if (idx < 0) {
+            idx = lower.indexOf("\u8d3e\u7ef4\u65af");
+            skip = "\u8d3e\u7ef4\u65af".length();
+        }
         if (idx < 0) {
             return text.trim();
         }
-        return text.substring(idx + "jarvis".length()).replaceAll("^[\\s,.:;!?-]+", "");
+        return text.substring(idx + skip).replaceAll("^[\\s,.:;!?-]+", "");
     }
 
     private String firstTranscript(Bundle bundle) {
