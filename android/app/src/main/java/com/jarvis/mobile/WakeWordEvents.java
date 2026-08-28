@@ -24,6 +24,6 @@ final class WakeWordEvents {
         if (target == null) {
             return;
         }
-        new Handler(Looper.getMainLooper()).post(() -> target.notifyListeners(event, data));
+        new Handler(Looper.getMainLooper()).post(() -> target.emitEvent(event, data));
     }
 }
