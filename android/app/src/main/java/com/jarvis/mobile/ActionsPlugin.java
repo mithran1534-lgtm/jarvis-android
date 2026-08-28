@@ -39,7 +39,7 @@ public class ActionsPlugin extends Plugin {
 
     @PluginMethod
     public void vibrate(PluginCall call) {
-        long ms = Math.max(50, Math.min(5000, (long) call.getDouble("duration", 300)));
+        long ms = Math.max(50, Math.min(5000, (long) call.getDouble("duration", 300.0)));
         Vibrator vibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
         if (vibrator != null && vibrator.hasVibrator()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -53,7 +53,7 @@ public class ActionsPlugin extends Plugin {
 
     @PluginMethod
     public void setTimer(PluginCall call) {
-        long seconds = Math.max(1, Math.min(86400, (long) call.getDouble("seconds", 60)));
+        long seconds = Math.max(1, Math.min(86400, (long) call.getDouble("seconds", 60.0)));
         String label = call.getString("label", "Timer done");
         Intent intent = new Intent(getContext(), TimerReceiver.class)
                 .setAction("com.jarvis.mobile.TIMER_" + System.currentTimeMillis())
