@@ -32,7 +32,7 @@ jobs:
         run: npx cap sync android
 
       - name: Build debug APK
-        run: cd android && chmod +x gradlew && ./gradlew assembleDebug
+        run: cd android && sed -i 's/\r$//' gradlew && chmod +x gradlew && ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
